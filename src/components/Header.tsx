@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import type { KeyboardEvent } from 'react'
 import { navigation } from '../data/navigation'
-import { siteConfig } from '../data/siteConfig'
 import { pageContent } from '../data/pageContent'
+import logoAutoExecutivo from '../assets/logo-autoexecutivo.webp'
 import { Container } from './Container'
 import { WhatsAppLink } from './WhatsAppLink'
 
@@ -35,10 +35,7 @@ export function Header() {
 
   function closeMenu(href?: string) {
     dialog.current?.close()
-    if (href) {
-      // O destino recebe foco após a restauração nativa do dialog.
-      requestAnimationFrame(() => document.querySelector<HTMLElement>(href)?.focus({ preventScroll: true }))
-    }
+    if (href) requestAnimationFrame(() => document.querySelector<HTMLElement>(href)?.focus({ preventScroll: true }))
   }
 
   function containTab(event: KeyboardEvent<HTMLDialogElement>) {
@@ -58,7 +55,7 @@ export function Header() {
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <Container className="header__inner">
-        <a href="#inicio" className="brand">{siteConfig.brand}</a>
+        <a href="#inicio" className="brand"><img className="brand__logo" src={logoAutoExecutivo} alt="Auto Executivo" /></a>
         <nav className="desktop-nav" aria-label="Navegação principal">
           {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
         </nav>
@@ -71,7 +68,7 @@ export function Header() {
       </Container>
       <dialog ref={dialog} id="mobile-menu" className="mobile-menu" aria-label="Navegação principal" onKeyDown={containTab} onClose={() => { setMenuOpen(false); trigger.current?.focus() }} onClick={(event) => { if (event.target === event.currentTarget) closeMenu() }}>
         <div className="mobile-menu__inner">
-          <div className="mobile-menu__top"><span className="brand">{siteConfig.brand}</span><button type="button" className="menu-close" aria-label="Fechar menu" onClick={() => closeMenu()}>×</button></div>
+          <div className="mobile-menu__top"><span className="brand"><img className="brand__logo brand__logo--menu" src={logoAutoExecutivo} alt="Auto Executivo" /></span><button type="button" className="menu-close" aria-label="Fechar menu" onClick={() => closeMenu()}>×</button></div>
           <nav aria-label="Navegação mobile">
             {navigation.map((item) => <a key={item.href} href={item.href} onClick={() => closeMenu(item.href)}>{item.label}<span aria-hidden="true">↗</span></a>)}
           </nav>
