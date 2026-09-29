@@ -10,25 +10,29 @@ export function HeroSection() {
   const content = pageContent.hero
   return (
     <section id="inicio" className="hero surface-dark" aria-labelledby="hero-title" tabIndex={-1}>
+      <div className="hero__media" aria-hidden="true">
+        <img
+          className="hero__image"
+          src={heroExecutive}
+          alt=""
+          width="1440"
+          height="810"
+          fetchPriority="high"
+        />
+        <div className="hero__image-shade" />
+        <BrandDiagonal />
+      </div>
+
       <Container className="hero__grid">
         <div className="hero__content">
           <Eyebrow>{content.eyebrow}</Eyebrow>
           <h1 id="hero-title">{content.heading}</h1>
           <p>{content.text}</p>
-          <div className="hero__actions"><WhatsAppLink variant="light">{content.primaryCta}</WhatsAppLink><Button href="#servicos" variant="ghost">{content.secondaryCta}</Button></div>
+          <div className="hero__actions">
+            <WhatsAppLink variant="light">{content.primaryCta}</WhatsAppLink>
+            <Button href="#servicos" variant="ghost">{content.secondaryCta}</Button>
+          </div>
           <p className="hero__territory">{content.territory}</p>
-        </div>
-        <div className="hero__media">
-          <img
-            className="hero__image"
-            src={heroExecutive}
-            alt=""
-            width="1440"
-            height="810"
-            fetchPriority="high"
-          />
-          <div className="hero__image-shade" aria-hidden="true" />
-          <BrandDiagonal />
         </div>
       </Container>
     </section>
