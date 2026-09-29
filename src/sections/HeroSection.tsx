@@ -3,7 +3,6 @@ import { Container } from '../components/Container'
 import { Eyebrow } from '../components/Eyebrow'
 import { Button } from '../components/Button'
 import { WhatsAppLink } from '../components/WhatsAppLink'
-import { BrandDiagonal } from '../components/BrandDiagonal'
 import heroExecutive from '../assets/hero-executive.webp'
 
 export function HeroSection() {
@@ -20,7 +19,6 @@ export function HeroSection() {
           fetchPriority="high"
         />
         <div className="hero__image-shade" />
-        <BrandDiagonal />
       </div>
 
       <Container className="hero__grid">
@@ -34,6 +32,7 @@ export function HeroSection() {
           </div>
           <p className="hero__territory">{content.territory}</p>
         </div>
+        <span className="hero__diagonal" aria-hidden="true" />
       </Container>
     </section>
   )
