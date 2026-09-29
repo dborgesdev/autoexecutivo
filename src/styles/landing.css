@@ -91,8 +91,9 @@ p { max-width: var(--text-max-width); }
 .split-copy { min-width: 0; }
 .split-copy h2 { margin-bottom: var(--space-8); }
 .split-copy > .button { margin-top: var(--space-8); }
-.corporate-media { position: relative; padding: 0 12px 12px 0; }
-.corporate-media::before { content: ''; position: absolute; inset: 20% 0 0 20%; background: var(--color-gold-soft); }
+.corporate-media { position: relative; padding: 0 12px 12px 0; isolation: isolate; }
+.corporate-media::before { content: ''; position: absolute; inset: 20% 0 0 20%; background: var(--color-gold-soft); z-index: -1; }
+.corporate-media > * { position: relative; z-index: 1; }
 .quality-section { padding-bottom: 0; overflow: clip; }
 .quality-word { margin-top: var(--space-16); color: var(--color-bg-secondary); font-family: var(--font-heading); font-weight: var(--font-weight-semibold); font-size: clamp(2.8rem, 14vw, 11rem); line-height: 0.9; letter-spacing: -0.05em; white-space: nowrap; user-select: none; }
 .regions-grid { display: grid; gap: var(--space-8); margin-bottom: var(--space-12); }
