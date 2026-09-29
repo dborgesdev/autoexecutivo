@@ -2,7 +2,7 @@ import { pageContent } from "../data/pageContent";
 import { Section } from "../components/Section";
 import { Eyebrow } from "../components/Eyebrow";
 import { WhatsAppLink } from "../components/WhatsAppLink";
-import corporateImage from "../assets/corporate.webp";
+import corporateImage from "/images/corporate.webp";
 
 export function CorporateSection() {
   const content = pageContent.corporate;
