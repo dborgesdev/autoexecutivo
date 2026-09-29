@@ -5,6 +5,8 @@ import logoAutoExecutivo from '../assets/logo-autoexecutivo.webp'
 import { Container } from './Container'
 
 export function Footer() {
+  const year = new Date().getFullYear()
+
   return (
     <footer id="rodape" className="footer surface-warm">
       <Container className="footer__grid">
@@ -14,6 +16,10 @@ export function Footer() {
         </div>
         <nav aria-label="Navegação do rodapé">{footerNavigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</nav>
         <a className="footer__phone" href={`tel:+${siteConfig.phoneNormalized}`}>{siteConfig.phoneDisplay}</a>
+      </Container>
+      <Container className="footer__legal">
+        <p>© {year} Auto Executivo. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://smartlocal.com.br" target="_blank" rel="noopener noreferrer">Douglas Borges - Smart Local</a></p>
       </Container>
     </footer>
   )
