@@ -35,6 +35,12 @@ export const pageContent = {
     text: 'A Auto Executivo também atende empresas por meio de contratação de transporte corporativo, além de serviços para deslocamento de passageiros, encomendas e amostras.',
     cta: 'Falar sobre transporte corporativo',
   },
+  executive: {
+    eyebrow: 'TRANSPORTE EXECUTIVO',
+    heading: 'Transporte executivo para seus deslocamentos.',
+    text: 'Transporte para deslocamentos particulares, compromissos e outras necessidades mediante solicitação.',
+    cta: 'Solicitar transporte',
+  },
   quality: {
     eyebrow: 'AUTO EXECUTIVO',
     heading: 'Qualidade como princípio de cada atendimento.',
