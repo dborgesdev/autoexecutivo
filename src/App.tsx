@@ -6,6 +6,7 @@ import { ValueSection } from './sections/ValueSection'
 import { ServicesSection } from './sections/ServicesSection'
 import { SharedTransportSection } from './sections/SharedTransportSection'
 import { CorporateSection } from './sections/CorporateSection'
+import { ExecutiveTransportSection } from './sections/ExecutiveTransportSection'
 import { QualitySection } from './sections/QualitySection'
 import { RegionsSection } from './sections/RegionsSection'
 import { FinalCTA } from './sections/FinalCTA'
@@ -21,6 +22,7 @@ export default function App() {
         <ServicesSection />
         <SharedTransportSection />
         <CorporateSection />
+        <ExecutiveTransportSection />
         <QualitySection />
         <RegionsSection />
         <FinalCTA />
