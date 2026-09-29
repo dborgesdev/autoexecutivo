@@ -32,8 +32,7 @@ export function HeroSection() {
           </div>
           <p className="hero__territory">{content.territory}</p>
         </div>
-        <span className="hero__diagonal" aria-hidden="true" />
-      </Container>
+</Container>
     </section>
   )
 }
