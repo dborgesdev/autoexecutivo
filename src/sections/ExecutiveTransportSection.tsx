@@ -16,7 +16,7 @@ export function ExecutiveTransportSection() {
           <p>{content.text}</p>
           <WhatsAppLink context="executive" variant="light">{content.cta}</WhatsAppLink>
         </div>
-        <div className="section-media">
+        <div className="section-media dark-media-accent">
           <img src={executiveTransportImage} alt="" loading="lazy" decoding="async" />
         </div>
       </div>
