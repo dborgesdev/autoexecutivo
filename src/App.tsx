@@ -20,9 +20,9 @@ export default function App() {
         <HeroSection />
         <ValueSection />
         <ServicesSection />
-        <SharedTransportSection />
-        <CorporateSection />
         <ExecutiveTransportSection />
+        <CorporateSection />
+        <SharedTransportSection />
         <QualitySection />
         <RegionsSection />
         <FinalCTA />
