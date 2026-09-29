@@ -2,9 +2,14 @@
 
 ## Source of truth
 
-The implementation must follow `docs/site-spec.md`.
+Read both source documents before implementation:
 
-The specification contains the approved business, content, UX, visual, responsive, SEO and acceptance requirements. Do not reinterpret or rewrite approved content unless required by a genuine technical limitation or explicitly requested.
+- `docs/content.md` is the source of truth for all approved textual content, including navigation labels, service descriptions, CTAs, WhatsApp messages and SEO copy.
+- `docs/site-spec.md` is the source of truth for layout, design system, behavior, components, responsiveness, accessibility, technical SEO, assets, performance and acceptance criteria.
+
+Follow the precedence rule in `docs/content.md`, section 17: for textual conflicts with indirect references in the specification (such as "copy aprovada anteriormente"), use the literal text from `docs/content.md`.
+
+Do not rewrite, expand or "improve" approved copy. Do not fill gaps using assumptions, market conventions, generated content or conversation history. Items marked PENDENTE must remain undefined unless the content document explicitly supplies a fallback: use the General WhatsApp message for the regions CTA and reuse the approved title/meta description for Open Graph. Additional business details must remain absent until supplied; the exact footer copyright wording is still pending.
 
 ## Project scope
 
