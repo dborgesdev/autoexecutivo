@@ -63,7 +63,7 @@ export function Header() {
           {navigation.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
         </nav>
         <div className="header__actions">
-          <WhatsAppLink className="header__cta" variant={scrolled ? 'dark' : 'light'}>{pageContent.headerCta}</WhatsAppLink>
+          <WhatsAppLink className="header__cta" variant="light">{pageContent.headerCta}</WhatsAppLink>
           <button ref={trigger} type="button" className="menu-toggle" aria-label="Abrir menu" aria-expanded={menuOpen} aria-controls="mobile-menu" onClick={() => { dialog.current?.showModal(); setMenuOpen(true) }}>
             <span aria-hidden="true" /><span aria-hidden="true" />
           </button>
