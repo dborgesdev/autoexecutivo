@@ -18,6 +18,12 @@
   --color-border: color-mix(in srgb, var(--color-graphite) 15%, transparent);
   --color-border-dark: color-mix(in srgb, var(--color-white) 20%, transparent);
   --color-focus: currentColor;
+  --color-accent-readable: color-mix(in srgb, var(--color-gold) 65%, var(--color-graphite));
+  --color-text-on-dark-muted: color-mix(in srgb, var(--color-white) 76%, var(--color-graphite));
+  --color-placeholder: color-mix(in srgb, var(--color-graphite) 12%, var(--color-warm-white));
+  --color-placeholder-dark: color-mix(in srgb, var(--color-white) 8%, var(--color-graphite));
+  --header-height: 80px;
+  --anchor-offset: calc(var(--header-height) + 24px);
 
   --font-heading: 'Manrope', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
